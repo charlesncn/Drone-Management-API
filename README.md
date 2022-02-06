@@ -14,8 +14,8 @@
 >> postman
 
 > **prerequisites & required installations**
->> Python3 
->> Mongodb
+>> Python3\
+>> Mongodb\
 >> Postman
 
 
@@ -33,7 +33,7 @@ This data is then consumed by the API in JSON form and fed to the database. Usin
 format(JSON)
 
 
-## Building instructions
+## Build instructions
 **IDE used VSCODE**
 
 - To run MongoDb open terminal and type ```mongo start```
@@ -47,7 +47,6 @@ format(JSON)
 open Postman and type the following commands to test the API.
 
 ### 1. registering a drone
-
 Select POST method then type ```http://localhost:5000/add``` on the URL bar, Click **SEND** to send the request. You shoud be ble to see a success message.\
 <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/add.png">
 
