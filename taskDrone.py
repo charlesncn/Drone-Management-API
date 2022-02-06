@@ -126,7 +126,7 @@ def get_battery(id):
     res =dumps(get_battery)
     return res
 
-        
+# battery log       
 @app.route('/batterylog')
 def batterylog():
     i=1
@@ -139,7 +139,7 @@ def batterylog():
 
 
 
-
+# returns an error. Fail safe
 @app.errorhandler(404)
 def not_added(error=None):
     message ={
