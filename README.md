@@ -84,6 +84,6 @@ click **SEND**.<br><br>
 <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/getBatID.png"><br><br><br>
 
 ### Battery Log.<br><br>
-<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/getBatID.png"><br><br><br>
+<img src="https://github.com/charlesncn/task_Drone/blob/master/img/BatLog.png"><br><br><br>
 
 ## END
