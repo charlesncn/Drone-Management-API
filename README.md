@@ -29,7 +29,8 @@ This API allows the client to:
 
 
 I have used ``` random ``` a python library to generate Data for various variables used in the project. I have also used it to assign different states to newly created drone and also assigning battery charge.
-This data is then consumed by the API in JSON form and fed to the database. Using Postman, the required data is fetched an the same format.
+This data is then consumed by the API in JSON form and fed to the database. Using Postman, the required data is fetched/updated using the same data
+format(JSON)
 
 
 ## Building instructions
@@ -80,3 +81,5 @@ Select GET method and type ```http://localhost:5000/available``` on the url bar 
 Select GET method and type ```hhttp://localhost:5000/get-battery/<id>``` on the url bar. **Replace <id> with the actual id of the drone you want to check.** and 
 click **SEND**.
 <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/getBatID.png">
+
+  ## END
