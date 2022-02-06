@@ -105,6 +105,12 @@ def load_drone(id):
         return res
 
 
+# route to check loaded medication items for a given drone
+@app.route('/get-med/<id>')
+def get_med_details(id):
+    get_med_details = mongo.db.drone.find({'_id': ObjectId(id)}, {'medName': 1, 'medWeight': 1, 'medCode': 1, 'medImage': 1})
+    res = dumps(get_med_details)
+    return res
 
 
 @app.errorhandler(404)
