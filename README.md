@@ -67,9 +67,9 @@ fig 2.1 Loading drone that is  not at IDLE state
 Select GET method and type ```http://localhost:5000/get-med/<id>``` on the url bar. **Replace <id> with the actual id of the drone you want to check.** and 
 click **SEND** The API will filter out the fields containing information about medication loaded to that drone.
 <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/viewMedOnDrone.png">
-  
 
-  
+
+
 ### 4. checking available drones for loading;
 This method filters out those drones that are IDLE and have Charge of more than 25%.
 Select GET method and type ```http://localhost:5000/available``` on the url bar and click **SEND**
@@ -81,4 +81,7 @@ Select GET method and type ```hhttp://localhost:5000/get-battery/<id>``` on the 
 click **SEND**.
 <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/getBatID.png">
 
-  ## END
+### Battery Log
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/getBatID.png">
+
+## END
