@@ -1,15 +1,17 @@
 # Task Drone
 ### REST API
 
-### Language
-> Python
-### framework
-> Flask
-### Database
-> Mongodb running locally
+> **Language**
+>> Python
 
-### API test platform
-> postman
+> **framework**
+>> Flask
+
+> **Database**
+>> Mongodb (running locally)
+
+> **API test platform**
+>> postman
 
 
 ## About the project.
@@ -25,35 +27,51 @@ I have used ``` random ``` a python library to generate Data for various variabl
 This data is then consumed by the API in JSON form and fed to the database. Using Postman, the required data is fetched an the same format.
 
 
-
 ## Building instructions
-- IDE used VSCODE.
-1. Open folder containing the file task_Drone.py on yout IDE(I used VSCODE)
-2. Open terminal on VsCode by pressing ```Ctrl+``` . (help in displaying vital information when the programm is running)
-3. Click Run button.
+> IDE used VSCODE.
+> 
+- TO run MongoDb open terminal and type ```mongo start```
+- Open folder containing the file task_Drone.py on yout IDE(I used VSCODE)
+- Open terminal on VsCode by pressing ```Ctrl+``` . (help in displaying vital information when the programm is running)
+- Click Run button.
+
 
 
 ## Testing
 open Postman and type the following commands to test the api.
 
-### registering a drone
+### 1. registering a drone
 
 Select POST method then type ```http://localhost:5000/add``` on the Url bar, Click **SEND** to send the request. You shoud be ble to see a success message.\
 <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/add.png">
 
 
-### loading a drone with medication items;
-Select PUT method then type ```http://localhost:5000/add-load``` on the Url bar, Click **SEND** to execute the request.\
-<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/addLoad.png">
+### 2. loading a drone with medication items;
+Select PUT method then type ```http://localhost:5000/add-load``` on the Url bar, Click **SEND** to execute the request.
+Every time a drone is loaded its state changes from **IDLE** to **LOADING**.
 
-### checking loaded medication items for a given drone;
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/addLoad.png">
+fig 2.0 Loading a drone with a state IDLE with medication.
+
+
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/AddMedError.png">
+fig 2.1 Loading drone that is  not at IDLE state
+
+
+### 3. checking loaded medication items for a given drone;
 Select GET method and type ```http://localhost:5000/get-med/<id>``` on the url bar. **Replace <id> with the actual id of the drone you want to check.** and 
 click **SEND** The API will filter out the fields containing information about medication loaded to that drone.
+  <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/viewMedOnDrone.png">
+  
 
-### checking available drones for loading;
+  
+### 4. checking available drones for loading;
 This method filters out those drones that are IDLE and have Charge of more than 25%.
 Select GET method and type ```http://localhost:5000/available``` on the url bar and click **SEND**
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/avail.png">
 
-### check drone battery level for a given drone.
+
+### 5. check drone battery level for a given drone.
 Select GET method and type ```hhttp://localhost:5000/get-battery/<id>``` on the url bar. **Replace <id> with the actual id of the drone you want to check.** and 
 click **SEND**.
+  <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/getBatID.png">
