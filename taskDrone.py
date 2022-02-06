@@ -111,12 +111,19 @@ def get_med_details(id):
     get_med_details = mongo.db.drone.find({'_id': ObjectId(id)}, {'medName': 1, 'medWeight': 1, 'medCode': 1, 'medImage': 1})
     res = dumps(get_med_details)
     return res
-    
+
 # route to check available drones for loading
 @app.route('/available')
 def available_drones():
     available_drones = mongo.db.drone.find({"loadState": {'$eq':"IDLE"}})
     res = dumps(available_drones)
+    return res
+
+# check drone battery level for a given drone
+@app.route('/get-battery/<id>')
+def get_battery(id):
+    get_battery = mongo.db.drone.find({'_id': ObjectId(id)}, {'batteryCap':1 })
+    res =dumps(get_battery)
     return res
 
 
