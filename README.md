@@ -36,12 +36,15 @@ This data is then consumed by the API in JSON form and fed to the database. Usin
 ## Testing
 open Postman and type the following commands to test the api.
 
-### egistering a drone
+### registering a drone
 
-Select POST method then type ```http://localhost:5000/add``` on the Url bar, Click **SEND** to send the request. You shoud be ble to see a success message.
+Select POST method then type ```http://localhost:5000/add``` on the Url bar, Click **SEND** to send the request. You shoud be ble to see a success message.\
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/add.png">
+
 
 ### loading a drone with medication items;
-Select PUT method then type ```http://localhost:5000/add-load``` on the Url bar, Click **SEND** to execute the request.
+Select PUT method then type ```http://localhost:5000/add-load``` on the Url bar, Click **SEND** to execute the request.\
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/addLoad.png">
 
 ### checking loaded medication items for a given drone;
 Select GET method and type ```http://localhost:5000/get-med/<id>``` on the url bar. **Replace <id> with the actual id of the drone you want to check.** and 
@@ -51,6 +54,6 @@ click **SEND** The API will filter out the fields containing information about m
 This method filters out those drones that are IDLE and have Charge of more than 25%.
 Select GET method and type ```http://localhost:5000/available``` on the url bar and click **SEND**
 
-### heck drone battery level for a given drone.
+### check drone battery level for a given drone.
 Select GET method and type ```hhttp://localhost:5000/get-battery/<id>``` on the url bar. **Replace <id> with the actual id of the drone you want to check.** and 
 click **SEND**.
