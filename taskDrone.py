@@ -12,6 +12,16 @@ from bson.objectid import ObjectId
 import random
 
 
+#global variavbles
+#generate random data
+length = random.randint(10,100)
+lower = string.ascii_lowercase
+upper = string.ascii_uppercase
+num = random.randint(0,9)
+symbal = random.choice(['-', '_'])
+
+
+
 app = Flask(__name__)
 
 
