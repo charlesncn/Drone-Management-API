@@ -37,17 +37,17 @@ This data is then consumed by the API in JSON form and fed to the database. Usin
 
 - To run MongoDb open terminal and type ```mongo start```
 - Open folder containing the file task_Drone.py on yout IDE(I used VSCODE)
-- Open terminal on VsCode by pressing ```Ctrl+``` . (help in displaying vital information when the programm is running)
+- Open terminal on VsCode by pressing ```Ctrl+``` . (help in displaying vital information when the program is running)
 - Click Run button.
 
 
 
 ## Testing
-open Postman and type the following commands to test the api.
+open Postman and type the following commands to test the API.
 
 ### 1. registering a drone
 
-Select POST method then type ```http://localhost:5000/add``` on the Url bar, Click **SEND** to send the request. You shoud be ble to see a success message.\
+Select POST method then type ```http://localhost:5000/add``` on the URL bar, Click **SEND** to send the request. You shoud be ble to see a success message.\
 <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/add.png">
 
 
