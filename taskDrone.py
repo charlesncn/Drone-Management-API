@@ -126,6 +126,18 @@ def get_battery(id):
     res =dumps(get_battery)
     return res
 
+        
+@app.route('/batterylog')
+def batterylog():
+    i=1
+    while i>1:
+        batterylog = mongo.db.drone.find({'batteryCap': {'$gt': 1}},{'batteryCap': 1})
+        res = dumps(batterylog)
+        time.sleep(5)
+        i+=1
+        return res
+
+
 
 
 @app.errorhandler(404)
