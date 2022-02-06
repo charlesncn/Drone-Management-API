@@ -13,6 +13,11 @@
 > **API test platform**
 >> postman
 
+> **prerequisites & required installations**
+>> Python3 
+>> Mongodb
+>> Postman
+
 
 ## About the project.
 This API allows the client to:
@@ -23,14 +28,14 @@ This API allows the client to:
 - check drone battery level for a given drone;
 
 
-I have used ``` random ``` a python library to generate Data for various variables used in the project.
+I have used ``` random ``` a python library to generate Data for various variables used in the project. I have also used it to assign different states to newly created drone and also assigning battery charge.
 This data is then consumed by the API in JSON form and fed to the database. Using Postman, the required data is fetched an the same format.
 
 
 ## Building instructions
-> IDE used VSCODE.
-> 
-- TO run MongoDb open terminal and type ```mongo start```
+**IDE used VSCODE**
+
+- To run MongoDb open terminal and type ```mongo start```
 - Open folder containing the file task_Drone.py on yout IDE(I used VSCODE)
 - Open terminal on VsCode by pressing ```Ctrl+``` . (help in displaying vital information when the programm is running)
 - Click Run button.
@@ -61,7 +66,7 @@ fig 2.1 Loading drone that is  not at IDLE state
 ### 3. checking loaded medication items for a given drone;
 Select GET method and type ```http://localhost:5000/get-med/<id>``` on the url bar. **Replace <id> with the actual id of the drone you want to check.** and 
 click **SEND** The API will filter out the fields containing information about medication loaded to that drone.
-  <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/viewMedOnDrone.png">
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/viewMedOnDrone.png">
   
 
   
@@ -74,4 +79,4 @@ Select GET method and type ```http://localhost:5000/available``` on the url bar 
 ### 5. check drone battery level for a given drone.
 Select GET method and type ```hhttp://localhost:5000/get-battery/<id>``` on the url bar. **Replace <id> with the actual id of the drone you want to check.** and 
 click **SEND**.
-  <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/getBatID.png">
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/getBatID.png">
