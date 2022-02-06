@@ -73,7 +73,10 @@ click **SEND** The API will filter out the fields containing information about m
 ### 4. checking available drones for loading;
 This method filters out those drones that are IDLE and have Charge of more than 25%.
 Select GET method and type ```http://localhost:5000/available``` on the url bar and click **SEND**
+In this case there was only one drone that was IDLE
 <img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/avail.png">
+However after adding more drones to the fleet I got another IDLE drone with a healthy battery.
+<img src="https://raw.githubusercontent.com/charlesncn/task_Drone/master/img/available2.png">
 
 
 ### 5. check drone battery level for a given drone.
