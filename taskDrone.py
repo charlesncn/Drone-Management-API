@@ -63,6 +63,50 @@ def add_drone():
         return not_added()
 
 
+
+# route to load a drone with medication items
+@app.route('/add-load/<id>', methods=['PUT'])
+def load_drone(id):
+    _id = id
+    _json =request.json
+
+    all = upper + lower + str(num) + symbal
+    all_upper = upper + str(num) + symbal
+    temp = random.sample(all,length)
+    temp_upper = random.sample(all_upper,length)
+
+    _medName = "".join(temp)
+    _medWeight = _json['medWeight']
+    _medCode = "".join(temp_upper)
+    _medImage = _json['medImage']
+
+
+    if mongo.db.drone.find_one({ '$and': [{'_id': ObjectId(_id)},{'weightLimit': {'$gt':_medWeight}},{'loadState': {'$eq':"IDLE"}}]}):
+        if _medName and _medWeight and _medCode and _medImage and request.method == 'PUT':
+
+            _loadState = 'LOADING'
+
+            mongo.db.drone.update_one({'_id': ObjectId(_id['$oid']) if '$oid' in _id else ObjectId(_id)}, {'$set': {'loadState':_loadState, 'medName':_medName,'medWeight':_medWeight,'medImage':_medImage,'medCode':_medCode}})
+
+            res =jsonify("updated")
+            res.status_code = 200
+            return res
+        else:
+            return not_added()
+
+    else:
+        message ={
+            'status': 404,
+            'message':'Drone not available or Weight too heavy ' + request.url
+        }        
+
+        res = jsonify(message)
+        res.status_code = 404
+        return res
+
+
+
+
 @app.errorhandler(404)
 def not_added(error=None):
     message ={
