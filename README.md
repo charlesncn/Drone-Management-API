@@ -1,5 +1,5 @@
 # Drone Controller API
-Service to mange drones
+Service to manage drones
 ### REST API
 
 > **Language**
