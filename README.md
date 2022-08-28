@@ -29,8 +29,8 @@ This API allows the client to.
 - check drone battery level for a given drone.<br><br><br>
 
 
-I have used ``` random ``` a python library to generate Data for various variables used in the project. I have also used it to assign different states to newly created drone and also assigning battery charge.
-This data is then consumed by the API in JSON form and fed to the database. Using Postman, the required data is fetched/updated using the same data
+This service uses ``` random ``` a python library to generate Data for various variables used in the project. It also assigns different states to newly created drone and also assigning battery charge value.
+This data is then consumed by the API in JSON form and fed to the database. Using Postman, the required data can be fetched/updated using the same data
 format(JSON)<br><br><br>
 
 
