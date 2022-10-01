@@ -13,6 +13,7 @@ import random
 
 
 #global variavbles
+
 #generate random data
 length = random.randint(10,100)
 lower = string.ascii_lowercase
